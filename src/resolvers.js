@@ -1,7 +1,4 @@
 const Trip = require('./model');
-const {
-  Types: { ObjectId },
-} = require('mongoose');
 
 const resolvers = {
   Query: {
@@ -25,7 +22,7 @@ const resolvers = {
           from: { name: fromPlaceId },
           to: { name: toPlaceId },
         });
-        console.log('trip', trip);
+        // console.log('trip', trip);
         return trip;
       } catch (err) {
         console.error(err);
